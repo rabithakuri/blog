@@ -15,7 +15,7 @@ from django.core.paginator import Paginator,EmptyPage,PageNotAnInteger
 
 def	post_list(request):
     object_list	=	Post.published.all()
-    paginator	=	Paginator(object_list,	3)	#	3	posts	in	each	page
+    paginator	=	Paginator(object_list,3)	#	3	posts	in	each	page
     page	=	request.GET.get('page')
     try:
     	posts	=	paginator.page(page)
@@ -81,8 +81,8 @@ def	post_share(request,	post_id):
             #	Form	fields	passed	validation
             cd	=	form.cleaned_data
             post_url	=	request.build_absolute_uri(post.get_absolute_url())
-            subject	=	'{}	({})	recommends	you	reading	"{}"'.format(cd['name'],cd['email'],post.title)
-            message	=	'Read	"{}"	at	{}\n\n{}\'s	comments:{}'.format(post.title,	post_url,cd['name'],cd['comments'])
+            subject	=	'{}	({})	recommends	you	reading	"{}"'.format(cd['name'], cd['email'], post.title)
+            message	=	'Read	"{}"	at	{}\n\n{}\'s	comments:{}'.format(post.title,	post_url, cd['name'], cd['comment'])
             send_mail(subject,message,'admin@myblog.com',[cd['to']])
             sent	=	True
     else:

@@ -1,3 +1,23 @@
 body{
-    background-color: red;
+    background-color: rgb(216, 211, 211);
+}
+
+#content {
+    width:40%;
+    float: left;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+}
+
+#sidebar {
+    width:60%;
+    float:right;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
 }

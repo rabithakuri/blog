@@ -25,7 +25,7 @@ SECRET_KEY = '^pc_cpw#nvx+7ssgfbf4+je^gqxq0c@ia!vs9=b511_5%rrrii'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
